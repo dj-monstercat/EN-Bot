@@ -1292,9 +1292,22 @@
                 }
             },
 
-            addCommand: {
-                command: 'add',
-                rank: 'mod',
+            bot.commands.automateRoulette = {
+command: ['autoroulette'],
+rank: 'manager',
+type: 'exact',
+functionality: function (chat, cmd) {
+if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+if (!bot.commands.executable(this.rank, chat)) return void (0);
+else {
+autoRoulette = !autoRoulette;
+                API.sendChat("/me Roulette now set to " + autoRoulette);}}};addCommand: {
+            }       
+        }        
+    }           
+    
+    command: 'add',
+    rank: 'mod',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
