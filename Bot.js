@@ -47,7 +47,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/dj-monstercat/EN-Bot/master/langIndex.json", function (json) {
+        $.get("https://cdn.jsdelivr.net/gh/dj-monstercat/EN-Bot/langIndex.json", function (json) {
             var link = trapbot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -175,9 +175,9 @@
         status: false,
         name: "EN-Bot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/dj-monstercat/EN-Bot/master/Bot.js",
+        scriptLink: "https://cdn.jsdelivr.net/gh/dj-monstercat/EN-Bot/Bot.js",
         cmdLink: "null",
-        chatLink: "https://rawgit.com/dj-monstercat/EN-Bot/master/en.json",
+        chatLink: "https://cdn.jsdelivr.net/gh/dj-monstercat/EN-Bot/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -185,7 +185,7 @@
         settings: {
             botName: "EN-Bot",
             language: "english",
-            chatLink: "https://rawgit.com/dj-monstercat/EN-Bot/master/en.json",
+            chatLink: "https://cdn.jsdelivr.net/gh/dj-monstercat/EN-Bot/en.json",
             maximumAfk: 120,
             afkRemoval: false,
             maximumDc: 60,
